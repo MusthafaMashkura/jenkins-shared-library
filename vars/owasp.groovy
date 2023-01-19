@@ -6,9 +6,6 @@ def dast(String appurl) {
                 docker exec owasp zap-baseline.py -t "${appurl}" -x report.xml -I
                 echo $WORKSPACE
                 docker cp owasp:/zap/wrk/report.xml $WORKSPACE/report.xml
-                docker stop owasp && docker rm owasp
-                
+                docker stop owasp && docker rm owasp        
                '''
             }
-        }
-}
