@@ -1,4 +1,4 @@
-def dast(String appurl) {
+def dast() {
                sh '''
                 docker pull owasp/zap2docker-stable
                 docker run -dt --name owasp owasp/zap2docker-stable sh
